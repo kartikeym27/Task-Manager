@@ -6,7 +6,7 @@ import TestimonialSection from "@/components/homepage/TestimonialSection";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Home : Work Manager",
+  title: "Home : Task Manager",
 };
 
 export default function Home() {
