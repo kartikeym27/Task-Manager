@@ -14,20 +14,12 @@ export async function login(loginData) {
     .then((response) => response.data);
   return result;
 }
-export async function currentUser() {
-  if (typeof window === "undefined") {
-    // Avoid server-side call that needs a JWT
-    return null;
-  }
-
-  try {
-    const result = await httpAxios.get("/api/current").then((res) => res.data);
+  export async function currentUser() {
+    const result = await httpAxios
+      .get("/api/current")
+      .then((response) => response.data);
     return result;
-  } catch (err) {
-    console.error("Error fetching current user", err);
-    return null;
   }
-}
 
 export async function logout() {
   const result = await httpAxios
