@@ -1051,6 +1051,11 @@ sucrase@^3.32.0:
     pirates "^4.0.1"
     ts-interface-checker "^0.1.9"
 
+support-colors@^0.0.1-security:
+  version "0.0.1-security"
+  resolved "https://registry.yarnpkg.com/support-colors/-/support-colors-0.0.1-security.tgz#1ebc14b28e693615b2c6c18d32391ea7d7a33ea4"
+  integrity sha512-he6xk8ABiYs7RxRsHryWLWdl1sqsjf8i/YZQzvIqY2Z/C6AHxSDXv4h/qwBY6iejGNwMTdvnqZjOh8I0UP1aCA==
+
 supports-color@^9.4.0:
   version "9.4.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-9.4.0.tgz#17bfcf686288f531db3dea3215510621ccb55954"

@@ -15,10 +15,18 @@ export async function login(loginData) {
   return result;
 }
 export async function currentUser() {
-  const result = await httpAxios
-    .get("/api/current")
-    .then((response) => response.data);
-  return result;
+  if (typeof window === "undefined") {
+    // Avoid server-side call that needs a JWT
+    return null;
+  }
+
+  try {
+    const result = await httpAxios.get("/api/current").then((res) => res.data);
+    return result;
+  } catch (err) {
+    console.error("Error fetching current user", err);
+    return null;
+  }
 }
 
 export async function logout() {
